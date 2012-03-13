@@ -126,6 +126,20 @@ class Harvest {
 
         return $SimpleXMLElement;
     }
+    
+    /**
+     * getTasks method
+     * 
+     * @return SimpleXMLElement 
+     */
+    public function getTasks() {
+        $response = $this->sendRequest('/tasks');
+
+        if (!is_object($SimpleXMLElement = $this->parseResponse($response)))
+            return;
+
+        return $SimpleXMLElement;
+    }
 
 }
 
