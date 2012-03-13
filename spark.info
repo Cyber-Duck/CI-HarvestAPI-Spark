@@ -1,0 +1,7 @@
+name: HarvestAPI 
+version: 0.0.0
+compatibility: 2.0.2
+
+#dependencies:
+#  some-spark-1: 1.0.0
+#  some-other-spark-2: 1.0.0
