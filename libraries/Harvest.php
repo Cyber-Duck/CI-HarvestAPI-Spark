@@ -126,6 +126,20 @@ class Harvest {
 
         return $SimpleXMLElement;
     }
+    
+    /**
+     * getTimeEntries method
+     * 
+     * @return SimpleXMLElement 
+     */
+    public function getTimeEntries($projectId, $from, $to) {
+        $response = $this->sendRequest("/projects/$projectId/entries?from=$from&to=$to");
+
+        if (!is_object($SimpleXMLElement = $this->parseResponse($response)))
+            return;
+
+        return $SimpleXMLElement;
+    }
 
 }
 
