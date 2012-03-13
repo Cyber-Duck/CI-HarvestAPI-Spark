@@ -98,6 +98,20 @@ class Harvest {
 
         return $SimpleXMLElement;
     }
+    
+    /**
+     * getProjects method
+     * 
+     * @return SimpleXMLElement 
+     */
+    public function getProjects() {
+        $response = $this->sendRequest('/projects');
+
+        if (!is_object($SimpleXMLElement = $this->parseResponse($response)))
+            return;
+
+        return $SimpleXMLElement;
+    }
 
 }
 
