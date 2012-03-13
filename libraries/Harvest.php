@@ -112,6 +112,20 @@ class Harvest {
 
         return $SimpleXMLElement;
     }
+    
+    /**
+     * getUsers method
+     * 
+     * @return SimpleXMLElement 
+     */
+    public function getUsers() {
+        $response = $this->sendRequest('/people');
+
+        if (!is_object($SimpleXMLElement = $this->parseResponse($response)))
+            return;
+
+        return $SimpleXMLElement;
+    }
 
 }
 
