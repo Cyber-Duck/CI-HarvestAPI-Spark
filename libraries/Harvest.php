@@ -15,9 +15,9 @@ class Harvest {
      * @return string 
      */
     protected function sendRequest($url) {
-        $url = 'https://cyberduckuk.harvestapp.com' . $url;
-        $username = 'sylvain@cyber-duck.co.uk';
-        $password = 'BMWDuck3';
+        $url = 'https://YOUR ENDPOINT.harvestapp.com' . $url;
+        $username = 'YOUR USERNAME HERE';
+        $password = 'YOUR PASSWORD HERE';
 
         $ch = curl_init();
         curl_setopt_array($ch, array(CURLOPT_URL => $url,
